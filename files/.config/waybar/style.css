@@ -11,11 +11,13 @@ window#waybar {
 
 button {
     border: none;
+    border-radius: 24px;
 }
 
 .module {
     background: #142F43;
-    border-radius: 4px;
+    border-radius: 24px;
+    padding: 0px 8px 0px 8px;
 }
 
 button:hover {
