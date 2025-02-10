@@ -37,25 +37,21 @@ do
     fi
 done
 
-echo 
-echo clearing .config folder...
-here=$(pwd)
-to_remove=$(ls "$(pwd)/files/.config")
-cd ~/.config
-rm -r $to_remove
-cd $here
-
 echo
 echo copying configuration files...
-cp -r ./files/.config/* ~/.config/
-cp -r ./files/.icons/ ~/
-cp -r ./files/.themes ~/
+cp -rf ./files/.config/* ~/.config/
+cp -rf ./files/.icons/ ~/
+cp -rf ./files/.themes ~/
 
 echo
 echo enabling some things...
 systemctl --user enable waybar
 systemctl --user enable hyprpaper
 systemctl --user enable hyprpolkitagent.service
+
+systemctl --user restart waybar
+systemctl --user restart hyprpaper
+systemctl --user restart hyprpolkitagent.service
 
 echo
 echo
