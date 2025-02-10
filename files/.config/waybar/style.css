@@ -1,0 +1,24 @@
+* {
+    font-family: HackNerdFont;
+    color: #FBCAFF;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: #142F43;
+    border: 0px;
+    border-bottom: 2px solid #FBCAFF;
+    margin: 0px 32px 0px 0px;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    background: inherit;
+}
+
+#custom-power {
+    margin: 0px 12px 0px 0px;
+}
