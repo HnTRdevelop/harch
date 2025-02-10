@@ -43,5 +43,10 @@ cp -r ./files/.icons/ ~/
 cp -r ./files/.themes ~/
 
 echo
+echo enabling some things...
+systemctl --user enable waybar
+systemctl --user enable hyprpaper
+
+echo
 echo
 echo All done!
