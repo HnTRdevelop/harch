@@ -26,7 +26,7 @@ fi
 echo
 echo installing needed packages
 
-doas yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman-manager adwaita-qt6-git adwaita-qt5-git viu
+yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman-manager adwaita-qt6-git adwaita-qt5-git viu
 
 echo 
 echo clearing .config folder...
