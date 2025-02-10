@@ -46,6 +46,7 @@ echo
 echo enabling some things...
 systemctl --user enable waybar
 systemctl --user enable hyprpaper
+systemctl --user enable hyprpolkitagent.service
 
 echo
 echo
