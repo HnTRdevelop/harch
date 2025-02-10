@@ -1,5 +1,5 @@
 // -*- mode: jsonc -*-
-{
+[{
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
@@ -10,6 +10,24 @@
         "hyprland/workspaces",
         "hyprland/window"
     ],
+    "modules-center": [
+        "backlight",
+        "battery",
+        "pulseaudio",
+        "custom/clock",
+        "cpu",
+        "memory"
+    ],
+    "modules-right": [
+        "tray",
+        //"idle_inhibitor",
+        "hyprland/language",
+        //"custom/media",
+        "network",
+        "power-profiles-daemon",
+        "custom/power"
+    ],
+
     "hyprland/workspaces": {
         "active-only": "false",
         "all-outputs": "true",
@@ -33,16 +51,8 @@
     "hyprland/window": {
         "format": "[{}]"
     },
-
-
-
-    "modules-center": [
-        "cpu",
-        "custom/clock",
-        "memory"
-    ],
     "cpu": {
-        "format": "                   [ {usage:3}%]",
+        "format": "[ {usage:3}%]",
         "tooltip": false
     },
     "custom/clock": {
@@ -55,21 +65,6 @@
     "memory": {
         "format": "[ {used:2.1f}GiB/{total:2.1f}GiB]"
     },
-
-
-
-    "modules-right": [
-        "tray",
-        "idle_inhibitor",
-        "hyprland/language",
-        //"custom/media",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "backlight",
-        "battery",
-        "custom/power"
-    ],
     "tray": {
         "icon-size": 16,
         "spacing": 12
@@ -100,7 +95,7 @@
         "on-click": "pwvucontrol"
     },
     "network": {
-        "format-wifi": "[{essid}({frequency}) {signalStrength}%  ]",
+        "format-wifi": "[{essid}({frequency}) {signalStrength}% ]",
         "format-ethernet": "[Connected 󰈁]",
         "format-disconnected": "[Disconnected 󰈂]",
         "on-click": "kitty nmtui"
@@ -119,20 +114,20 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "[{name} {icon}]",
+        "format": "[{icon} {name}]",
         "format-icons": {
             "locked": " ",
             "unlocked": " "
         }
     },
     "backlight": {
-        "format": "[{percent}% {icon}]",
+        "format": "[{icon} {percent:3}%]",
         "format-icons": ["󰛩 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
     },
     "battery": {
-        "format": "[{capacity}% {icon}]",
-        "format-charging": "[{capacity}% 󰂄]",
-        "format-plugged": "[{capacity}%  ]",
+        "format": "[{icon} {capacity:3}%]",
+        "format-charging": "󰂄 [{capacity:3}%]",
+        "format-plugged": " [{capacity:3}%]",
         "format-icons": ["󰂎", "󰁺", "󰁻 ", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     //"clock": {
@@ -152,4 +147,4 @@
 			"suspend": "systemctl suspend"
 		}
     }
-}
+}]

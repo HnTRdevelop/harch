@@ -5,18 +5,17 @@ echo This script will install and configure everything automatically
 
 while :;
 do
-    echo "Proceed? [y/N]"
+    echo "Proceed? [Y/n]"
     read
     echo 
-    if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ] || [ "$REPLY" = "" ]; then
+    if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ]; then
         echo canceling...
         exit
-    elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
+    elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ] || [ "$REPLY" = "" ]; then
         echo proceeding...
         break
     fi
 done
-
 
 if [ "$(pacman -Qsq yay)" != "yay" ]; then
     echo firstly install yay
@@ -24,9 +23,19 @@ if [ "$(pacman -Qsq yay)" != "yay" ]; then
 fi
 
 echo
-echo installing needed packages
-
-yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman adwaita-qt6-git adwaita-qt5-git viu hyprpolkitagent
+while :;
+do
+    echo "Install dependencies? [y/N]"
+    read
+    echo 
+    if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ] || [ "$REPLY" = "" ]; then
+        break
+    elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
+        echo installing needed packages
+        yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman adwaita-qt6-git adwaita-qt5-git viu hyprpolkitagent
+        break
+    fi
+done
 
 echo 
 echo clearing .config folder...
