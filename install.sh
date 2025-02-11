@@ -37,6 +37,12 @@ do
     fi
 done
 
+# echo
+# echo purging .config folder...
+# for i in $(ls ./files/.config/); do
+#     rm -rf ~/.config/$i
+# done
+
 echo
 echo copying configuration files...
 cp -rf ./files/.config/* ~/.config/
@@ -50,8 +56,8 @@ systemctl --user enable hyprpaper
 systemctl --user enable hyprpolkitagent.service
 
 systemctl --user restart waybar
-systemctl --user restart hyprpaper
-systemctl --user restart hyprpolkitagent.service
+systemctl --user restart hyprpapesystemctl --user restart hyprpolkitagent.service
+hyprctl reload
 
 echo
 echo
