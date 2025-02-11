@@ -56,7 +56,7 @@ systemctl --user enable hyprpaper
 systemctl --user enable hyprpolkitagent.service
 
 systemctl --user restart waybar
-systemctl --user restart hyprpape
+systemctl --user restart hyprpaper
 systemctl --user restart hyprpolkitagent.service
 hyprctl reload
 
