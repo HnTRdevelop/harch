@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo HArch - HnTR arch + hyprland installation script
-echo This script will install and configure everything automatically
+echo "|---------------------------------------------------------------|"
+echo "|       HArch - HnTR arch + hyprland installation script        |"
+echo "|This script will install and configure everything automatically|"
+echo "|---------------------------------------------------------------|"
 
-while :;
-do
+while :; do
     echo "Proceed? [Y/n]"
     read
-    echo 
     if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ]; then
         echo canceling...
         exit
@@ -22,12 +22,10 @@ if [ "$(pacman -Qsq yay)" != "yay" ]; then
     exit
 fi
 
-echo
 while :;
 do
     echo "Install dependencies? [y/N]"
     read
-    echo 
     if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ] || [ "$REPLY" = "" ]; then
         break
     elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
@@ -37,19 +35,25 @@ do
     fi
 done
 
-# echo
-# echo purging .config folder...
-# for i in $(ls ./files/.config/); do
-#     rm -rf ~/.config/$i
-# done
+while :; do
+    echo "Delete old .config folder? [y/N]"
+    read
+    if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ] || [ "$REPLY" = "" ]; then
+        break
+    elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
+        echo purging .config folder...
+        for i in $(ls ./files/.config/); do
+            rm -rf ~/.config/$i
+        done
+        break
+    fi
+done
 
-echo
 echo copying configuration files...
 cp -rf ./files/.config/* ~/.config/
 cp -rf ./files/.icons/ ~/
 cp -rf ./files/.themes ~/
 
-echo
 echo enabling some things...
 systemctl --user enable waybar
 systemctl --user enable hyprpaper
@@ -58,8 +62,6 @@ systemctl --user enable hyprpolkitagent.service
 systemctl --user restart waybar
 systemctl --user restart hyprpaper
 systemctl --user restart hyprpolkitagent.service
-hyprctl reload
+echo "hyprland reload: $(hyprctl reload)"
 
-echo
-echo
 echo All done!

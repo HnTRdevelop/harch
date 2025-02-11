@@ -72,8 +72,8 @@
     "idle_inhibitor": {
         "format": "[{icon}]",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "",
+            "deactivated": ""
         }
     },
     "hyprland/language": {
@@ -90,14 +90,14 @@
     // },
     "pulseaudio": {
         "format": "[{icon} {volume:3}%]",
-        "format-muted": "[  {volume:3}%]",
-        "format-icons": [" ", " ", " "],
+        "format-muted": "[ {volume:3}%]",
+        "format-icons": ["", "", ""],
         "on-click": "pwvucontrol"
     },
     "network": {
-        "format-wifi": "[ {essid} {signalStrength:3}%]",
-        "format-ethernet": "[󰈁 Connected]",
-        "format-disconnected": "[󰈂 Disconnected]",
+        "format-wifi": "[{essid} {signalStrength:3}%]",
+        "format-ethernet": "[󰈁Connected]",
+        "format-disconnected": "[󰈂Disconnected]",
         "on-click": "kitty nmtui"
     },
     "power-profiles-daemon": {
@@ -105,10 +105,10 @@
         "tooltip-format": "Power profile: {profile}",
         "tooltip": true,
         "format-icons": {
-            "default": " ",
-            "performance": " ",
-            "balanced": " ",
-            "power-saver": " "
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
       }
     },
     "keyboard-state": {
@@ -116,13 +116,13 @@
         "capslock": true,
         "format": "[{icon} {name}]",
         "format-icons": {
-            "locked": " ",
-            "unlocked": " "
+            "locked": "",
+            "unlocked": ""
         }
     },
     "backlight": {
         "format": "[{icon} {percent:3}%]",
-        "format-icons": ["󰛩 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
+        "format-icons": ["󰛩", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
     },
     "battery": {
         "format": "[{icon} {capacity:3}%]",
