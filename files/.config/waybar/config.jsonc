@@ -95,9 +95,9 @@
         "on-click": "pwvucontrol"
     },
     "network": {
-        "format-wifi": "[{essid} {signalStrength:3}%]",
-        "format-ethernet": "[󰈁Connected]",
-        "format-disconnected": "[󰈂Disconnected]",
+        "format-wifi": "[ {essid} {signalStrength:3}%]",
+        "format-ethernet": "[󰈁 Connected]",
+        "format-disconnected": "[󰈂 Disconnected]",
         "on-click": "kitty nmtui"
     },
     "power-profiles-daemon": {
