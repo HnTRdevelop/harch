@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=nm-applet
+Terminal=false
+Exec="/usr/bin/nm-applet"

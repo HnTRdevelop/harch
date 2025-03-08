@@ -5,7 +5,6 @@
 }
 
 window#waybar {
-    margin: 0px 32px 0px 0px;
     background: alpha(#142F43, 0);
 }
 
@@ -15,6 +14,7 @@ button {
 }
 
 .module {
+    margin: 0px;
     background: #142F43;
     border-radius: 24px;
     padding: 0px 8px 0px 8px;
@@ -22,8 +22,4 @@ button {
 
 button:hover {
     background: inherit;
-}
-
-#custom-power {
-    margin: 0px 12px 0px 0px;
 }

@@ -6,6 +6,7 @@
     // "width": 2176, // Waybar width
     "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
+    "margin": 6,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
@@ -23,7 +24,7 @@
         //"idle_inhibitor",
         "hyprland/language",
         //"custom/media",
-        "network",
+        //"network",
         "power-profiles-daemon",
         "custom/power"
     ],
