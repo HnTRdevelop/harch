@@ -12,15 +12,15 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "backlight",
-        "battery",
-        "pulseaudio",
-        "custom/clock",
         "cpu",
+        "custom/clock",
         "memory"
     ],
     "modules-right": [
         "tray",
+        "pulseaudio",
+        "backlight",
+        "battery",
         //"idle_inhibitor",
         "hyprland/language",
         //"custom/media",
