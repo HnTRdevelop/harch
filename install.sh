@@ -30,7 +30,7 @@ do
         break
     elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
         echo installing needed packages
-        yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman adwaita-qt6-git adwaita-qt5-git viu hyprpolkitagent
+        yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman adwaita-qt6-git adwaita-qt5-git viu hyprpolkitagent network-manager-applet
         break
     fi
 done
