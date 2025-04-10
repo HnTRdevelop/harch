@@ -23,7 +23,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export MPD_HOST=mpd
 
 export HOST_LANG=ru_RU.UTF-8
-export HOST_LC_ALL=ru_RU.UTF
+export HOST_LC_ALL=ru_RU.UTF-8
 
 export XDG_DESKTOP_DIR="$HOME/Desktop"
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"

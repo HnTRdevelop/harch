@@ -124,7 +124,7 @@
 
     # --- Misc/Advanced --- #
 
-    dmenu = /usr/bin/wofi --conf ~/.config/wofi/config --style ~/.config/wofi/style.css --show drun:
+    # dmenu = /usr/bin/wofi --conf ~/.config/wofi/config --style ~/.config/wofi/style.css --show drun:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/vivaldi -new-tab

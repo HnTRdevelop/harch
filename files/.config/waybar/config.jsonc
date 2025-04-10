@@ -8,13 +8,15 @@
     // Choose the order of the modules
     "margin": 6,
     "modules-left": [
+        "custom/menu",
+        "custom/special",
         "hyprland/workspaces",
-        "hyprland/window"
+        "cpu",
+        "memory"
+        //"hyprland/window"
     ],
     "modules-center": [
-        "cpu",
-        "custom/clock",
-        "memory"
+        "custom/clock"
     ],
     "modules-right": [
         "tray",
@@ -148,5 +150,13 @@
 			"reboot": "systemctl reboot",
 			"suspend": "systemctl suspend"
 		}
+    },
+    "custom/menu": {
+       "format": "[󰣇]",
+       "on-click": "uwsm app -- /home/hntr/.config/rofi/launcher/launcher.sh"
+    },
+    "custom/special": {
+       "format": "[S]",
+       "on-click": "hyprctl dispatch togglespecialworkspace special"
     }
 }]
