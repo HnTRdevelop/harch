@@ -156,11 +156,11 @@
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
-background = "#142F43BF"
+background = "#000000CC"
 foreground = "#FFFFFF"
-frame_color = "#FBCAFF"
-highlight = "#FBCAFF"
-separator_color = "#FBCAFFBF"
+frame_color = "#C20430"
+highlight = "#C20430"
+separator_color = "#C20430"
 
 [experimental]
     per_monitor_dpi = false
@@ -172,6 +172,6 @@ separator_color = "#FBCAFFBF"
     timeout = 9
 
 [urgency_critical]
-    frame_color = "#FFABE1"
+    frame_color = "#F18F48"
     timeout = 20
     

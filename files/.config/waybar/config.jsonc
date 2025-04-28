@@ -153,7 +153,7 @@
     },
     "custom/menu": {
        "format": "[󰣇]",
-       "on-click": "uwsm app -- /home/hntr/.config/rofi/launcher/launcher.sh"
+       "on-click": "uwsm app -- /home/hntr/.config/rofi/launcher/launcher.sh \"small\""
     },
     "custom/special": {
        "format": "[S]",

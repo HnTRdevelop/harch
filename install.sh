@@ -57,11 +57,13 @@ cp -rf ./files/.themes ~/
 echo enabling some things...
 systemctl --user enable waybar
 systemctl --user enable hyprpaper
-systemctl --user enable hyprpolkitagent.service
+systemctl --user enable hyprpolkitagent
+systemctl --user enable dunst
 
 systemctl --user restart waybar
 systemctl --user restart hyprpaper
-systemctl --user restart hyprpolkitagent.service
+systemctl --user restart hyprpolkitagent
+systemctl --user restart dunst
 echo "hyprland reload: $(hyprctl reload)"
 
 echo All done!

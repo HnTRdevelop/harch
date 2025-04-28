@@ -1,11 +1,11 @@
 * {
     font-family: HackNerdFontPropo;
-    color: #FBCAFF;
+    color: #C20430;
     font-size: 12px;
 }
 
 window#waybar {
-    background: alpha(#142F43, 0);
+    background: alpha(#000000, 0);
 }
 
 button {
@@ -15,7 +15,7 @@ button {
 
 .module {
     margin: 0px;
-    background: #142F43;
+    background: #000000;
     border-radius: 24px;
     padding: 0px 8px 0px 8px;
 }
