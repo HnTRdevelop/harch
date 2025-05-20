@@ -22,19 +22,6 @@ if [ "$(pacman -Qsq yay)" != "yay" ]; then
     exit
 fi
 
-while :;
-do
-    echo "Install dependencies? [y/N]"
-    read
-    if [ "$REPLY" = "n" ] || [ "$REPLY" = "N" ] || [ "$REPLY" = "" ]; then
-        break
-    elif [ "$REPLY" = "Y" ] || [ "$REPLY" = "y" ]; then
-        echo installing needed packages
-        yay -Syu hyprland waybar hyprshot hyprpaper hyprlock hyprpicker copyq nekoray firefox nemo dunst gedit kitty wofi gnome-calculator vscodium pwvucontrol ponymix brightnessctl hyprpicker gnome-calendar loupe blueman adwaita-qt6-git adwaita-qt5-git viu hyprpolkitagent network-manager-applet
-        break
-    fi
-done
-
 while :; do
     echo "Delete old .config folder? [y/N]"
     read
@@ -54,16 +41,11 @@ cp -rf ./files/.config/* ~/.config/
 cp -rf ./files/.icons/ ~/
 cp -rf ./files/.themes ~/
 
-echo enabling some things...
-systemctl --user enable waybar
-systemctl --user enable hyprpaper
-systemctl --user enable hyprpolkitagent
-systemctl --user enable dunst
+echo enabling/restarting some things...
+pkill waybar; waybar & disown
+pkill hyprpaper; hyprpaper & disown
+pkill dunst; dunst & disown
 
-systemctl --user restart waybar
-systemctl --user restart hyprpaper
-systemctl --user restart hyprpolkitagent
-systemctl --user restart dunst
 echo "hyprland reload: $(hyprctl reload)"
 
 echo All done!
