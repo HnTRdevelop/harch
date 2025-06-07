@@ -2,11 +2,11 @@
 [{
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 0, // Waybar height (to be removed for auto height)
     // "width": 2176, // Waybar width
     "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
-    "margin": 6,
+    "margin": 0,
     "modules-left": [
         "custom/menu",
         "custom/special",
@@ -19,6 +19,7 @@
         "custom/clock"
     ],
     "modules-right": [
+	//"wlr/taskbar",
         "tray",
         "pulseaudio",
         "backlight",
@@ -96,13 +97,13 @@
         "format": "[{icon} {volume:3}%]",
         "format-muted": "[ {volume:3}%]",
         "format-icons": ["", "", ""],
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
     "network": {
         "format-wifi": "[ {essid} {signalStrength:3}%]",
         "format-ethernet": "[󰈁 Connected]",
         "format-disconnected": "[󰈂 Disconnected]",
-        "on-click": "kitty nmtui"
+        "on-click": "connman-gtk"
     },
     "power-profiles-daemon": {
         "format": "[{icon}]",
@@ -146,17 +147,36 @@
 		"menu": "on-click",
 		"menu-file": "/home/hntr/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-            "shutdown": "systemctl poweroff",
-			"reboot": "systemctl reboot",
-			"suspend": "systemctl suspend"
+        	        "shutdown": "loginctl poweroff",
+	    		"reboot": "loginctl reboot",
+			"suspend": "loginctl suspend",
+			"lock": "hyprlock &"
 		}
     },
     "custom/menu": {
        "format": "[󰣇]",
-       "on-click": "uwsm app -- /home/hntr/.config/rofi/launcher/launcher.sh \"small\""
+       "on-click": "/home/hntr/.config/rofi/launcher/launcher.sh \"small\""
     },
     "custom/special": {
        "format": "[S]",
        "on-click": "hyprctl dispatch togglespecialworkspace special"
+    },
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
     }
+}
 }]

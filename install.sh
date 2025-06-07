@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "|---------------------------------------------------------------|"
-echo "|       HArch - HnTR arch + hyprland installation script        |"
-echo "|This script will install and configure everything automatically|"
-echo "|---------------------------------------------------------------|"
+echo "|------------------------------------------------------------------------|"
+echo "|       HArch - HnTR hyprland on artix + dinit installation script       |"
+echo "|    This script will install and configure everything automatically     |"
+echo "|------------------------------------------------------------------------|"
 
 while :; do
     echo "Proceed? [Y/n]"
@@ -16,11 +16,6 @@ while :; do
         break
     fi
 done
-
-if [ "$(pacman -Qsq yay)" != "yay" ]; then
-    echo firstly install yay
-    exit
-fi
 
 while :; do
     echo "Delete old .config folder? [y/N]"
