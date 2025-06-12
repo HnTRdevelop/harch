@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "|------------------------------------------------------------------------|"
-echo "|       HArch - HnTR hyprland on artix + dinit installation script       |"
+echo "|      HArtix - HnTR hyprland on artix + dinit installation script       |"
 echo "|    This script will install and configure everything automatically     |"
 echo "|------------------------------------------------------------------------|"
 
