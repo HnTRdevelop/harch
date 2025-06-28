@@ -34,7 +34,9 @@ done
 echo copying configuration files...
 cp -rf ./files/.config/* ~/.config/
 cp -rf ./files/.icons/ ~/
-cp -rf ./files/.themes ~/
+cp -rf ./files/.themes/ ~/
+cp -rf ./files/.local/ ~/
+cp -rf ./files/.zprofile ~/
 
 echo enabling/restarting some things...
 pkill waybar; waybar & disown

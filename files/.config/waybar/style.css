@@ -1,12 +1,12 @@
 * {
     font-family: HackNerdFontPropo;
-    color: #81A1C1;
+    color: #EBDBB2;
     font-size: 12px;
 }
 
 window#waybar {
     /*background: alpha(#2E3440, 0);*/
-    background: #2E3440;
+    background: #1D2021;
 }
 
 button {
@@ -16,13 +16,13 @@ button {
 
 .module {
     margin: 0px;
-    background: #434C5E;
+    background: #3C3836;
     border-radius: 24px;
     padding: 0px 8px 0px 8px;
 }
 
 menu menuitem:hover {
-    background-color: #4C566A;
+    background-color: #1D2021;
 }
 
 
