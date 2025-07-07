@@ -17,7 +17,7 @@ export CLUTTER_BACKEND=wayland
 
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export QT_QPA_PLATFORM="wayland;xcb"
+export QT_QPA_PLATFORM="wayland"
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 
