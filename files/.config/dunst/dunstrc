@@ -16,8 +16,8 @@
     progress_bar = true
     progress_bar_height = 14
     progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
+    progress_bar_min_width = 512
+    progress_bar_max_width = 512
 
     # Show how many messages are hidden
     indicate_hidden = yes
@@ -36,7 +36,7 @@
     horizontal_padding = 16
 
     # Disable frame (border)
-    frame_width = 2
+    frame_width = 4
 
     # Sort messages by urgency.
     sort = no
@@ -139,7 +139,7 @@
     class = Dunst
 
     # Define the corner radius of the notification window
-    corner_radius = 6
+    corner_radius = 0
 
     # Don't gnore the dbus closeNotification message.
     ignore_dbusclose = false
@@ -158,8 +158,8 @@
 
 background = "#1D2021A0"
 foreground = "#FFFFFF"
-frame_color = "#EBDBB2"
-highlight = "#EBDBB2"
+frame_color = "#FABD2F"
+highlight = "#FABD2F"
 separator_color = "#1D2021"
 
 [experimental]

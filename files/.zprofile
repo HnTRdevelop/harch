@@ -15,11 +15,11 @@ export GDK_BACKEND=wayland,x11,*
 export SDL_VIDEODRIVER=wayland,x11,windows
 export CLUTTER_BACKEND=wayland
 
-export QT_STYLE_OVERRIDE=Adwaita-Dark
+# export QT_STYLE_OVERRIDE=Adwaita-Dark
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORM="wayland"
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=gtk3
 
 export HOST_LANG=ru_RU.UTF-8
 export HOST_LC_ALL=en_US.UTF-8
@@ -33,7 +33,14 @@ export XDG_MUSIC_DIR="$HOME/Music"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
+# export http_proxy=http://127.0.0.1:2080/
+# export https_proxy=$http_proxy
+# export ftp_proxy=$http_proxy
+# export rsync_proxy=$http_proxy
+# export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+
 if [[ "$(tty)" == "/dev/tty1" ]]
   then
     exec Hyprland
 fi
+
