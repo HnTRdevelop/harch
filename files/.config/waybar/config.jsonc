@@ -2,7 +2,7 @@
 [{
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 0, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     // "width": 2176, // Waybar width
     "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -11,9 +11,7 @@
         "custom/menu",
         "custom/special",
         "hyprland/workspaces",
-        "cpu",
-        "memory"
-        //"hyprland/window"
+        "hyprland/window"
     ],
     "modules-center": [
         "custom/clock"
@@ -21,14 +19,16 @@
     "modules-right": [
 	//"wlr/taskbar",
         "tray",
+        "cpu",
+        "memory",
         "pulseaudio",
         "backlight",
         "battery",
         //"idle_inhibitor",
         "hyprland/language",
         //"custom/media",
-        "network",
         "power-profiles-daemon",
+        "network",
         "custom/power"
     ],
 
@@ -103,7 +103,7 @@
         "format-wifi": "[ {essid} {signalStrength:3}%]",
         "format-ethernet": "[󰈁 Connected]",
         "format-disconnected": "[󰈂 Disconnected]",
-        "on-click": "connman-gtk"
+        "on-click": "nm-connection-editor"
     },
     "power-profiles-daemon": {
         "format": "[{icon}]",
@@ -147,9 +147,9 @@
 		"menu": "on-click",
 		"menu-file": "/home/hntr/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-        	        "shutdown": "loginctl poweroff",
-	    		"reboot": "loginctl reboot",
-			"suspend": "loginctl suspend",
+        	        "shutdown": "shutdown now",
+	    		"reboot": "reboot",
+			"suspend": "systemctl suspend",
 			"lock": "hyprlock &"
 		}
     },

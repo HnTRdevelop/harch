@@ -48,7 +48,7 @@
 
     # Set the font
     # font = "Noto Sans 11"
-    font = "HackNerdFont 12"
+    font = "TerminessNerdFont 12"
 
     # Set line height to font height
     line_height = 0
